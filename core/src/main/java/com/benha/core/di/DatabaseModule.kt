@@ -25,7 +25,7 @@ class DatabaseModule {
     fun provideDatabase(@ApplicationContext context: Context): RecipeDatabase =
         Room.databaseBuilder(
             context,
-            RecipeDatabase::class.java, "Resep.db"
+            RecipeDatabase::class.java, "Resep"
         ).fallbackToDestructiveMigration()
             .openHelperFactory(factory)
             .build()
